@@ -4,7 +4,6 @@ function Logo() {
   return (
     <div>
       <img
-        className="w-10"
         src="https://github.githubassets.com/assets/pair-extraordinaire-default-579438a20e01.png"
         alt="image1"
       />
