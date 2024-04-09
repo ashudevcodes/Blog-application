@@ -10,7 +10,7 @@ function AllPosts() {
     useEffect(() => {
         authService.getCurrentUser().then((user) => {
             // console.log(user)
-            appwriteService.getPosts([Query.equal("userId", String(user.$id))]).then((posts) => {
+            appwriteService.getPosts([Query.equal("userId", String(user.$id)), Query.orderDesc("$updatedAt")]).then((posts) => {
                 authService.getCurrentUser().then((userDate) => {
                     const filteredDocuments = posts.documents.filter(documents => documents.userId == userDate.$id);
                     // console.log(posts);

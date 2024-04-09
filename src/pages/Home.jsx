@@ -3,6 +3,7 @@ import appwriteService from "../appwrite/config";
 import { Container, PostCard } from "../components";
 import { Link } from "react-router-dom";
 import authService from "../appwrite/auth";
+import { Query } from 'appwrite';
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -15,7 +16,10 @@ function Home() {
   };
   useEffect(() => {
     checkUser();
-    appwriteService.getPosts().then((posts) => {
+    appwriteService.getPosts([
+      Query.equal("status", "active"),
+      Query.orderDesc("$updatedAt")
+    ]).then((posts) => {
       if (posts) {
         setPosts(posts.documents);
       }
