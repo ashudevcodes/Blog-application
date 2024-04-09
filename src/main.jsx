@@ -16,7 +16,6 @@ import EditPost from "./pages/EditPost";
 import Post from "./pages/Post";
 
 import AllPosts from "./pages/AllPosts";
-import { Analytics } from '@vercel/analytics/react';
 
 const router = createBrowserRouter([
   {
@@ -83,6 +82,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
     <RouterProvider router={router}/>
     </Provider>
-    <Analytics />
   </React.StrictMode>,
 )
