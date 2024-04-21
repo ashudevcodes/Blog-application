@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
 
             <a
-              href='https://www.instagram.com/@ashishprasad__'
+              href='https://www.instagram.com/ashishprasad__'
               target='_blank'
               rel='noreferrer'
               className='group rounded-full border border-gray-200 p-2 transition-colors hover:bg-gray-100'>
