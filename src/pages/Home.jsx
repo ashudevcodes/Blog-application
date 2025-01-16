@@ -3,6 +3,8 @@ import appwriteService from "../appwrite/config";
 import { Container, Footer, PostCard } from "../components";
 import { Link } from "react-router-dom";
 import authService from "../appwrite/auth";
+import pcman from "../public/pcman.png"
+import cycleman from "../public/cycleman.png"
 import { Query } from 'appwrite';
 
 function Home() {
@@ -73,7 +75,7 @@ function Home() {
                     <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
                         <img
                             className="w-96"
-                            src="../../public/pcman.png"
+                            src={pcman}
                             alt="image1"
                         />
                     </div>
@@ -82,7 +84,7 @@ function Home() {
                 <div className="grid  place-items-center sm:mt-20">
                     <img
                         className="sm:w-96 w-48"
-                        src="../../public/cycleman.png"
+                        src={cycleman}
                         alt="image2"
                     />
                 </div>
